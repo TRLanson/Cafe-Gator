@@ -1,4 +1,21 @@
-import { validateContact, validateName, validatePassword } from './validation';
+import { useRouter } from 'expo-router';
+import { useState } from 'react';
+import {
+  KeyboardAvoidingView,
+  Platform,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+} from 'react-native';
+import { FormField } from '../components/FormField';
+import { colors } from '../theme/colors';
+import {
+  NAME_MAX_LENGTH,
+  validateContact,
+  validateName,
+  validatePassword,
+} from '../utils/validation';
 
 describe('validatePassword', () => {
   it('accepts a strong password', () => {
